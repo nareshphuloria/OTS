@@ -1,0 +1,48 @@
+﻿@model IEnumerable<OTS.Web.Models.AccountModel>
+<table>
+    <tr>
+    </tr>
+    <tr>
+        <th>
+            Account Id
+        </th>
+        <th>
+            Customer Id
+        </th>
+        <th>
+            BrokAmount
+        </th>
+        <th>
+            TransAmount
+        </th>
+        <th>
+            INTEREST
+        </th>
+        <th>
+            GainLost
+        </th>
+        <th>
+            Balance
+        </th>
+    </tr>
+    @foreach (var account in Model)
+    {
+        <tr>
+            <td>
+                @account.Id
+            </td>
+            <td>@account.CustomerId
+            </td>
+            <td>@account.BrokAmount
+            </td>
+            <td>@account.TransAmount
+            </td>
+            <td>@account.Interest
+            </td>
+            <td>@account.GainLost
+            </td>
+            <td>@account.Balance
+            </td>
+        </tr>
+    }
+</table>

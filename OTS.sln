@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UILayer", "UILayer", "{7653CA6F-E2AD-42BB-9937-924CD9437940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTS.Web", "OTS.Web\OTS.Web.csproj", "{607C8693-0529-4506-B579-6C941FC275E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{BBEF57F6-F5B5-4C1E-8F35-872589DD77B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PersistenceLayer", "PersistenceLayer", "{854327EA-9788-4A02-ACF2-51922E5F06DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTS.Manager", "OTS.Manager\OTS.Manager.csproj", "{CDB738D6-A995-4936-84F4-461C2362E5E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTS.PersistenceLayer", "OTS.PersistenceLayer\OTS.PersistenceLayer.csproj", "{61786A35-014D-4258-BE23-B6DF81D1757F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonLayer", "CommonLayer", "{47DEB8C3-DEFF-47C0-A979-21C55113154A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTS.Utilities", "OTS.Utilities\OTS.Utilities.csproj", "{C62C3C9D-EF5A-47B2-81B1-426800B0DAD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTS.DataTransferObjects", "OTS.DataTransferObjects\OTS.DataTransferObjects.csproj", "{1AA2F71C-8A99-4C32-A9DB-01B39E9CDE07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{607C8693-0529-4506-B579-6C941FC275E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607C8693-0529-4506-B579-6C941FC275E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607C8693-0529-4506-B579-6C941FC275E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607C8693-0529-4506-B579-6C941FC275E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB738D6-A995-4936-84F4-461C2362E5E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB738D6-A995-4936-84F4-461C2362E5E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB738D6-A995-4936-84F4-461C2362E5E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB738D6-A995-4936-84F4-461C2362E5E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61786A35-014D-4258-BE23-B6DF81D1757F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61786A35-014D-4258-BE23-B6DF81D1757F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61786A35-014D-4258-BE23-B6DF81D1757F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61786A35-014D-4258-BE23-B6DF81D1757F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C62C3C9D-EF5A-47B2-81B1-426800B0DAD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62C3C9D-EF5A-47B2-81B1-426800B0DAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62C3C9D-EF5A-47B2-81B1-426800B0DAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62C3C9D-EF5A-47B2-81B1-426800B0DAD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA2F71C-8A99-4C32-A9DB-01B39E9CDE07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA2F71C-8A99-4C32-A9DB-01B39E9CDE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA2F71C-8A99-4C32-A9DB-01B39E9CDE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA2F71C-8A99-4C32-A9DB-01B39E9CDE07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{607C8693-0529-4506-B579-6C941FC275E5} = {7653CA6F-E2AD-42BB-9937-924CD9437940}
+		{CDB738D6-A995-4936-84F4-461C2362E5E0} = {BBEF57F6-F5B5-4C1E-8F35-872589DD77B7}
+		{61786A35-014D-4258-BE23-B6DF81D1757F} = {854327EA-9788-4A02-ACF2-51922E5F06DF}
+		{1AA2F71C-8A99-4C32-A9DB-01B39E9CDE07} = {854327EA-9788-4A02-ACF2-51922E5F06DF}
+		{C62C3C9D-EF5A-47B2-81B1-426800B0DAD2} = {47DEB8C3-DEFF-47C0-A979-21C55113154A}
+	EndGlobalSection
+EndGlobal
