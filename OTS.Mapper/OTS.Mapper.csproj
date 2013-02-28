@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CDB738D6-A995-4936-84F4-461C2362E5E0}</ProjectGuid>
+    <ProjectGuid>{B5F79B23-A34F-4914-AD4E-0B8A9612035A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OTS.Manager</RootNamespace>
-    <AssemblyName>OTS.Manager</AssemblyName>
+    <RootNamespace>OTS.Mapper</RootNamespace>
+    <AssemblyName>OTS.Mapper</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,18 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountManager.cs" />
-    <Compile Include="CustomerManager.cs" />
+    <Compile Include="IObjectMapper.cs" />
+    <Compile Include="ObjectMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OTS.DataTransferObjects\OTS.DataTransferObjects.csproj">
       <Project>{1AA2F71C-8A99-4C32-A9DB-01B39E9CDE07}</Project>
       <Name>OTS.DataTransferObjects</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OTS.PersistenceLayer\OTS.PersistenceLayer.csproj">
-      <Project>{61786A35-014D-4258-BE23-B6DF81D1757F}</Project>
-      <Name>OTS.PersistenceLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\OTS.Web\OTS.Web.csproj">
       <Project>{607C8693-0529-4506-B579-6C941FC275E5}</Project>
