@@ -24,6 +24,9 @@
         <th>
             Balance
         </th>
+        <th>
+            Action
+        </th>
     </tr>
     @foreach (var account in Model)
     {
@@ -42,6 +45,11 @@
             <td>@account.GainLost
             </td>
             <td>@account.Balance
+            </td>
+            <td>
+              @Html.ActionLink("Edit Account", "Edit", "Account",new {id = @account.Id},null)
+              @Html.ActionLink("Delete Account", "Delete", "Account",new {id = @account.Id},null)
+               
             </td>
         </tr>
     }

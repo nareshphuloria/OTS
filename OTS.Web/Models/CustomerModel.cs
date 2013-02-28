@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace OTS.Web.Models
+﻿namespace OTS.Web.Models
 {
     public class CustomerModel
     {

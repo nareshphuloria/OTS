@@ -1,2 +1,49 @@
-﻿@model dynamic
+﻿@model OTS.Web.Models.AccountModel
 
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>AccountModel</legend>
+
+    <div class="display-label">CustomerId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CustomerId)
+    </div>
+
+    <div class="display-label">BrokAmount</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BrokAmount)
+    </div>
+
+    <div class="display-label">TransAmount</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TransAmount)
+    </div>
+
+    <div class="display-label">Interest</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Interest)
+    </div>
+
+    <div class="display-label">GainLost</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GainLost)
+    </div>
+
+    <div class="display-label">Balance</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Balance)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

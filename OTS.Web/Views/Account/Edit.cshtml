@@ -1,8 +1,76 @@
-﻿@model dynamic
+﻿@model OTS.Web.Models.AccountModel
 
 @{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>title</h2>
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>AccountModel</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CustomerId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CustomerId)
+            @Html.ValidationMessageFor(model => model.CustomerId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BrokAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BrokAmount)
+            @Html.ValidationMessageFor(model => model.BrokAmount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TransAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TransAmount)
+            @Html.ValidationMessageFor(model => model.TransAmount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Interest)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Interest)
+            @Html.ValidationMessageFor(model => model.Interest)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GainLost)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GainLost)
+            @Html.ValidationMessageFor(model => model.GainLost)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Balance)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Balance)
+            @Html.ValidationMessageFor(model => model.Balance)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
