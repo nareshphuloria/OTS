@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using OTS.Web.Models;
+using OTS.BusinessLayer.Manager;
+using OTS.Models;
 
 namespace OTS.Web.Controllers
 {
@@ -12,24 +12,49 @@ namespace OTS.Web.Controllers
             return View(GetAllCustomers());
         }
 
-        public ActionResult Create(CustomerModel model)
+        public ActionResult Create()
         {
-            return View("Index");
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(CustomerModel customerModel)
+        {
+            CustomerManager customerMgr = new CustomerManager();
+            customerMgr.SaveCustomerDetails(customerModel);
+            
+            return RedirectToAction("Index");
         }
 
         public ActionResult Edit(int id)
         {
-            return View();
+            CustomerManager customerMgr = new CustomerManager();
+            CustomerModel customerModel = customerMgr.GetCustomerById(id);
+
+            return View(customerModel);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(CustomerModel customerModel)
+        {
+            CustomerManager customerMgr = new CustomerManager();
+            customerMgr.SaveCustomerDetails(customerModel);
+
+            return RedirectToAction("Index");
         }
 
         public ActionResult Delete(int id)
         {
-            return View();
+            CustomerManager customerMgr = new CustomerManager();
+            customerMgr.DeleteCustomer(id);
+
+            return RedirectToAction("Index");
         }
 
         private IList<CustomerModel> GetAllCustomers()
         {
-            return new List<CustomerModel>();
+            CustomerManager customerMgr = new CustomerManager();
+            return customerMgr.GetCustomerDetails();
         }
     }
 }

@@ -5,13 +5,21 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{61786A35-014D-4258-BE23-B6DF81D1757F}</ProjectGuid>
+    <ProjectGuid>{D4566D8E-CEDB-471F-9CBD-2D60154B3C5C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OTS.PersistenceLayer</RootNamespace>
-    <AssemblyName>OTS.PersistenceLayer</AssemblyName>
+    <RootNamespace>TCESS.ESales.CommonLayer.UnityExtension</RootNamespace>
+    <AssemblyName>TCESS.ESales.CommonLayer.UnityExtension</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,9 +39,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Binaries\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,23 +53,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountRepository.cs" />
-    <Compile Include="ConnectionClass.cs" />
-    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="OTSUnityContainerExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQLHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\OTS.CommonLayer.DataTransferObjects\OTS.CommonLayer.DataTransferObjects.csproj">
-      <Project>{1AA2F71C-8A99-4C32-A9DB-01B39E9CDE07}</Project>
-      <Name>OTS.CommonLayer.DataTransferObjects</Name>
+    <ProjectReference Include="..\OTS.CommonLayer.Mapper\OTS.CommonLayer.Mapper.csproj">
+      <Project>{B5F79B23-A34F-4914-AD4E-0B8A9612035A}</Project>
+      <Name>OTS.CommonLayer.Mapper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OTS.CommonLayer.Utilities\OTS.CommonLayer.Utilities.csproj">
-      <Project>{C62C3C9D-EF5A-47B2-81B1-426800B0DAD2}</Project>
-      <Name>OTS.CommonLayer.Utilities</Name>
+    <ProjectReference Include="..\OTS.CommonLayer.Unity\OTS.CommonLayer.Unity.csproj">
+      <Project>{AF44808C-3DBC-4635-9A5A-F82D208655AF}</Project>
+      <Name>OTS.CommonLayer.Unity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OTS.Web.Models.CustomerModel>
+﻿@model IEnumerable<OTS.Models.CustomerModel>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -46,8 +46,8 @@
             <td>@customer.Email
             </td>
             <td>
-                @Html.ActionLink("Edit Customer", "Edit", "Customer", new { id = @customer.Id }, null)
-                @Html.ActionLink("Delete Customer", "Delete", "Customer", new { id = @customer.Id }, null)
+                @Html.ActionLink("Edit", "Edit", "Customer", new { id = @customer.Id }, null)
+                @Html.ActionLink("Delete", "Delete", "Customer", new { id = @customer.Id }, null)
             </td>
         </tr>
     }

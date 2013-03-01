@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using Microsoft.ApplicationBlocks.Data;
-using OTS.DataTransferObjects;
-using OTS.Utilities;
 using System.Data.SqlClient;
+using Microsoft.ApplicationBlocks.Data;
+using OTS.CommonLayer.DataTransferObjects;
+using OTS.CommonLayer.Utilities;
 
 namespace OTS.PersistenceLayer
 {

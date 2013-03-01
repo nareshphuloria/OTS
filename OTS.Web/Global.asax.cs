@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
+using OTS.CommonLayer.Mapper;
+using OTS.CommonLayer.Unity;
+using Microsoft.Practices.Unity;
+using OTS.CommonLayer.UnityExtension;
 
 namespace OTS.Web
 {
@@ -26,13 +26,18 @@ namespace OTS.Web
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
-
         }
 
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
 
+            //Initializes unity container and registers interface with service classes 
+            OTSUnityContainerExtension.InitializeContainer();
+
+            //Creates mapping between Data transfer objects and persistence layer
+            OTSUnityContainer.Container.Resolve<IObjectMapper>().CreateMap();
+            
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }

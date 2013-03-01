@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using OTS.Web.Models;
+using OTS.Models;
 
 namespace OTS.Web.Controllers
 {
@@ -14,6 +14,11 @@ namespace OTS.Web.Controllers
         public ActionResult Details()
         {
             return View(GetAllAccounts());
+        }
+
+        public ActionResult Create()
+        {
+            return View();
         }
 
         [HttpPost]

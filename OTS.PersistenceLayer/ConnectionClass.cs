@@ -1,7 +1,7 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using OTS.Utilities;
+using OTS.CommonLayer.Utilities;
 
 namespace OTS.PersistenceLayer
 {
